@@ -6,3 +6,11 @@ For example, with a shift of 1, X would be replaced by Y, and Y would become Z, 
 An integer value is required to cipher a given text. the integer value is known as shift, which indicates the number of positions each letter of the text has been moved down.
 
 See the figure below.
+
+![image](./images/caeser_cipher.png)
+
+We can mathematically represent the encryption of a letter by a shift in the following way:
+
+Encryption phase with shift $` n = E_n (x) = (x + n) mod(26)$`
+
+Decryption phase with shift $` n = D_n (x) = (x - n) mod(26)$`
