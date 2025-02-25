@@ -1,4 +1,4 @@
-document.getElementById('result').innerHTML = "Hello Paragraph!";
+//document.getElementById('result').innerHTML = "Hello Paragraph!";
 
 //caeserCipher()
 function caeserCipher(text, shift) {
@@ -7,7 +7,8 @@ function caeserCipher(text, shift) {
         let char = text.charAt(i);
         if(char.match(/[a-z]/i)) {
             let isUpperCase = char === char.toUpperCase();
-            let shiftedChar = String.fromCharCode((char.charCodeAt(0) + shift - (isUpperCase ? 65: 97)) % 26 + (isUpperCase ? 65:97));
+            let shiftedChar = String.fromCharCode((char.charCodeAt(0) + shift - (isUpperCase ? 65 : 97)) % 26 + (isUpperCase ? 65 : 97));
+            result += shiftedChar;
         }
         else {
             result += char;
