@@ -19,11 +19,11 @@ function caeserCipher(text, shift) {
 //encryptText()
 function encryptText() {
     let inputText = document.getElementById('inputText').value;
-    let shiftValue = document.getElementById('shiftValue').value;
+    let shiftValue = parseInt(document.getElementById('shiftValue').value);
 
     if(!isNaN(shiftValue)) {
         let encryptedText = caeserCipher(inputText, shiftValue);
-        document.getElementById('result').innerText = `Encrypted Text: {encryptedText}`;
+        document.getElementById('result').innerText = `Encrypted Text: ${encryptedText}`;
     }
     else {
         document.getElementById('result').innerText = "Please enter a valid shift value!";
