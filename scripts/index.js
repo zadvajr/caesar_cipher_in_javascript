@@ -16,4 +16,16 @@ function caeserCipher(text, shift) {
     return result;
 }
 
-//
+//encryptText()
+function encryptText() {
+    let inputText = document.getElementById('inputText').value;
+    let shiftValue = document.getElementById('shiftValue').value;
+
+    if(!isNaN(shiftValue)) {
+        let encryptedText = caeserCipher(inputText, shiftValue);
+        document.getElementById('result').innerText = `Encrypted Text: {encryptedText}`;
+    }
+    else {
+        document.getElementById('result').innerText = "Please enter a valid shift value!";
+    }
+}
